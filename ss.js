@@ -12,6 +12,22 @@ const item = {
     ],
 }
 
+const make_option = (item) => {
+    let select_item = document.getElementById('select_item')
+    console.log(select_item)
+    for(let key in item){
+        let select = document.createElement('select')
+        select.onchange = "test(this)"
+        select_item.appendChild(select)
+        item[key].map((item,idx)=>{
+            let option = document.createElement('option')
+            option.value = String(idx)
+            option.text = item.name
+            select.appendChild(option)
+        })
+    }
+}
+
 let obj ={
     head:0,
     hand:0
@@ -41,3 +57,5 @@ const test3 = (arr) => {
     }, [0,0,0,0])
     console.log(sum)
 }
+
+make_option(item)
