@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>setting</title>
+    <style>
+        #select_item > div{
+            display: flex;
+        }
+        #select_item > div > label{
+            display: block;
+            width: 100px;
+        }
+        #select_item > div > select{
+            width: 100px;
+        }
+    </style>
 </head>
 <body>
-    <div id="select_item">
-
-    </div>
-    <select name="head" onchange="test(this)"></select><br>
-    <select name="hand" onchange="test(this)"></select><br>
+    <div id="select_item"></div>
 </body>
 <script src="./ss.js"></script>
 </html>
