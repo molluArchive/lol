@@ -22,15 +22,6 @@ const item = {
     ],
     반지:[
         {name:"없음", stat:{}},
-        {name:"초토화 머신", stat:{}},
-        {name:"속죄자의 긴고아", stat:{}},
-        {name:"얼굴없는 집행인", stat:{}},
-        {name:"썬더볼트", stat:{}},
-        {name:"얼어붙은 전사", stat:{}},
-        {name:"스컬 페이스", stat:{}},
-    ],
-    머리:[
-        {name:"없음", stat:{}},
         {name:"크리스탈 베인", stat:{}},
         {name:"자혜로운 바다", stat:{}},
         {name:"피를 삼킨 가시나무", stat:{}},
@@ -38,6 +29,15 @@ const item = {
         {name:"잊힌 전설", stat:{}},
         {name:"에일리언 오파츠", stat:{}},
         {name:"궤뚫어보는 자", stat:{}},
+    ],
+    머리:[
+        {name:"없음", stat:{}},
+        {name:"초토화 머신", stat:{}},
+        {name:"속죄자의 긴고아", stat:{}},
+        {name:"얼굴없는 집행인", stat:{}},
+        {name:"썬더볼트", stat:{}},
+        {name:"얼어붙은 전사", stat:{}},
+        {name:"스컬 페이스", stat:{}}
     ],
     상의:[
         {name:"없음", stat:{}},
