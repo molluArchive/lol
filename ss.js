@@ -1,17 +1,17 @@
 const item = {
-    moogi:[
+    무기:[
         {name:"없음", stat:{}},
         {name:"ㅅㄹㅁㄷㄹ", stat:{att:920}},
         {name:"ㅁㅁㅁ", stat:{att:800}},
     ],
-    mocgulyee:[
+    목걸이:[
         {name:"없음", stat:{}},
         {name:"목 마른 이의 구원", stat:{}},
         {name:"투귀의 눈", stat:{}},
         {name:"벼락 수집가", stat:{}},
         {name:"마나 강탈기", stat:{}},
     ],
-    palzzi:[
+    팔찌:[
         {name:"없음", stat:{}},
         {name:"다합의 팔찌", stat:{}},
         {name:"사이버 코어", stat:{}},
@@ -20,7 +20,7 @@ const item = {
         {name:"브레이브 블루", stat:{}},
         {name:"능력 증폭 장치", stat:{}},
     ],
-    banG:[
+    반지:[
         {name:"없음", stat:{}},
         {name:"초토화 머신", stat:{}},
         {name:"속죄자의 긴고아", stat:{}},
@@ -29,7 +29,7 @@ const item = {
         {name:"얼어붙은 전사", stat:{}},
         {name:"스컬 페이스", stat:{}},
     ],
-    muri:[
+    머리:[
         {name:"없음", stat:{}},
         {name:"크리스탈 베인", stat:{}},
         {name:"자혜로운 바다", stat:{}},
@@ -39,7 +39,7 @@ const item = {
         {name:"에일리언 오파츠", stat:{}},
         {name:"궤뚫어보는 자", stat:{}},
     ],
-    sang2:[
+    상의:[
         {name:"없음", stat:{}},
         {name:"외계의 선물", stat:{}},
         {name:"넘실거리는 물결 상의", stat:{}},
@@ -49,12 +49,12 @@ const item = {
         {name:"트릭 머신", stat:{}},
         {name:"퍼펙트 케어", stat:{}},
     ],
-    belt:[
+    벨트:[
         {name:"없음", stat:{}},
         {name:"mmm", stat:{b:5,c:15}},
         {name:"nnn", stat:{a:20}},
     ],
-    hi:[
+    하의:[
         {name:"없음", stat:{}},
         {name:"리미트리스", stat:{}},
         {name:"해일 드레스", stat:{}},
@@ -64,19 +64,19 @@ const item = {
         {name:"사이버네틱 링크", stat:{}},
         {name:"와이번 레더 팬츠", stat:{}},
     ],
-    sinbal:[
+    신발:[
         {name:"없음", stat:{}},
         {name:"최정예 전투 군화", stat:{}},
         {name:"모독의 부츠", stat:{}},
         {name:"넷러너", stat:{}},
         {name:"아이언 야크", stat:{}},
     ],
-    aggae:[
+    어깨:[
         {name:"없음", stat:{}},
         {name:"mmm", stat:{b:5,c:15}},
         {name:"nnn", stat:{a:20}},
     ],
-    janggab:[
+    장갑:[
         {name:"없음", stat:{}},
         {name:"심해의 보물", stat:{}},
         {name:"폭발물 전문가", stat:{}},
@@ -85,7 +85,7 @@ const item = {
         {name:"바이올런스 펀치", stat:{}},
         {name:"검붉게 얼룩진 손톱", stat:{}},
     ],
-    sige:[
+    시계:[
         {name:"없음", stat:{}},
         {name:"mmm", stat:{b:5,c:15}},
         {name:"nnn", stat:{a:20}},
@@ -95,7 +95,7 @@ const item = {
 
         {name:"벼락 수집가", stat:{}},{name:"벼락 수집가", stat:{}},
     ],
-    talgo:[
+    탈것:[
         {name:"없음", stat:{}},
         {name:"mmm", stat:{b:5,c:15}},
         {name:"nnn", stat:{a:20}},
