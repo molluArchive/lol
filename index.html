@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>setting</title>
     <style>
-        #select_item > div{
-            display: flex;
-        }
-        #select_item > div > label{
-            display: block;
-            width: 100px;
-        }
-        #select_item > div > select{
-            width: 100px;
-        }
+      #select_item > div {
+        display: flex;
+      }
+      #select_item > div > label {
+        display: block;
+        width: 100px;
+      }
+      #select_item > div > select {
+        width: 100px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div>
+      <select onchange="change_value_swith(this)">
+        <option value="0">최저옵</option>
+        <option value="1">최고옵</option>
+        <option value="2">중간옵</option>
+      </select>
+    </div>
     <div id="select_item"></div>
-</body>
-<script src="./ss.js"></script>
+  </body>
+  <script src="./ss.js"></script>
 </html>
