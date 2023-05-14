@@ -267,6 +267,19 @@ const item = {
   ],
 };
 
+const jickup = ["센티넬", "헤비암즈"];
+
+const make_jickup = (jickup) => {
+  let select = document.getElementById("jickup");
+
+  jickup.map((item, idx) => {
+    let option = document.createElement("option");
+    option.value = String(idx);
+    option.text = item;
+    select.appendChild(option);
+  });
+};
+
 const make_option = (item) => {
   let select_item = document.getElementById("select_item");
   for (let key in item) {
@@ -358,3 +371,4 @@ const test4 = (obj) => {
 };
 
 make_option(item);
+make_jickup(jickup);

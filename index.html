@@ -19,9 +19,8 @@
         align-items: center;
       }
       #select_item {
-        width: 300px;
+        width: 250px;
         height: 400px;
-        border: 1px solid black;
       }
       #select_item > div {
         display: flex;
@@ -31,23 +30,41 @@
         width: 100px;
       }
       #select_item > div > select {
-        width: 100px;
+        width: 150px;
       }
       #detail {
-        width: 300px;
+        width: 250px;
         height: 400px;
-        border: 1px solid black;
+        padding: 10px;
+        background-color: #000;
+        color: orange;
+        font-weight: 800;
       }
     </style>
   </head>
   <body>
     <div id="root">
       <div id="select_item">
-        <select onchange="change_value_swith(this)">
-          <option value="0">최저옵</option>
-          <option value="1">최고옵</option>
-          <option value="2">중간옵</option>
-        </select>
+        <div>
+          <label>직업</label>
+          <select id="jickup"> </select>
+        </div>
+        <div>
+          <label>옵션 등급</label>
+          <select onchange="change_value_swith(this)">
+            <option value="0">최저</option>
+            <option value="1">최고</option>
+            <option value="2">중간</option>
+          </select>
+        </div>
+        <div>
+          <label>??</label>
+          <select>
+            <option value="0">최저옵</option>
+            <option value="1">최고옵</option>
+            <option value="2">중간옵</option>
+          </select>
+        </div>
       </div>
       <div id="detail"></div>
     </div>
