@@ -376,8 +376,8 @@ const test3 = (arr) => {
     }
     return acc;
   }, {});
+  test4(sum)
   let obj = 스탯정리(sum);
-  console.log(obj)
 };
 
 const 스탯정리 = (obj) => {
