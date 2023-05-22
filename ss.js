@@ -305,7 +305,9 @@ const item = {
 };
 
 const juckup = (className) => {
+  if(className){
   item.무기.push(...weapon[className])
+  }
 }
 
 const make_option = (item) => {
