@@ -4,10 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>주사위</title>
+    <style>
+      .team {
+        > div {
+          > img {
+            width: 20%;
+          }
+        }
+      }
+    </style>
   </head>
   <body>
     <div>
-      <p>칼바람 랜덤픽</p>
+      <h3>칼바람 랜덤픽</h3>
     </div>
     <div>
       <div>주사위 수 (팀당 기본 5개 + 주사위 수만큼 뽑음)</div>
@@ -26,10 +35,16 @@
       </select>
     </div>
     <div>
-      <button id="select">select</button>
+      <button id="select">돌려</button>
     </div>
-    <div id="team1"></div>
-    <div id="team2"></div>
+    <div class="team">
+      <h4>TEAM 1</h4>
+      <div id="team1"></div>
+    </div>
+    <div class="team">
+      <h4>TEAM 2</h4>
+      <div id="team2"></div>
+    </div>
   </body>
 
   <script>
