@@ -2,69 +2,124 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>setting</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      #root {
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      #select_item {
-        width: 250px;
-        height: 400px;
-      }
-      #select_item > div {
-        display: flex;
-      }
-      #select_item > div > label {
-        display: block;
-        width: 100px;
-      }
-      #select_item > div > select {
-        width: 150px;
-      }
-      #detail {
-        width: 250px;
-        height: 400px;
-        padding: 10px;
-        background-color: #000;
-        color: orange;
-        font-weight: 800;
-      }
-    </style>
+    <title>주사위</title>
   </head>
   <body>
-    <div id="root">
-      <div id="select_item">
-        <div>
-          <label>옵션 등급</label>
-          <select onchange="change_value_swith(this)">
-            <option value="0">최저</option>
-            <option value="1">최고</option>
-            <option value="2">중간</option>
-          </select>
-        </div>
-        <!-- <div>
-          <label></label>
-          <select>
-            <option value="0">최저옵</option>
-            <option value="1">최고옵</option>
-            <option value="2">중간옵</option>
-          </select>
-        </div> -->
-        <br />
-      </div>
-      <div id="detail"></div>
+    <div>
+      <div>주사위 수</div>
+      <select id="dice">
+        <option value="0">0</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+      </select>
     </div>
+    <div>
+      <div>중복 여부</div>
+      <select id="duplication">
+        <option value="X">X</option>
+        <option value="O">O</option>
+      </select>
+    </div>
+    <div>
+      <button id="select">select</button>
+    </div>
+    <div id="team1"></div>
+    <div id="team2"></div>
   </body>
-  <script src="./ss.js"></script>
+
+  <script>
+    let champ_list;
+    const team1 = document.getElementById("team1");
+    const team2 = document.getElementById("team2");
+
+    const champ_url =
+      "https://ddragon.leagueoflegends.com/cdn/14.8.1/data/ko_KR/champion.json";
+
+    const img_url =
+      "https://ddragon.leagueoflegends.com/cdn/14.8.1/img/champion/";
+
+    const Http = new XMLHttpRequest();
+
+    Http.open("GET", champ_url);
+    Http.send();
+    Http.onreadystatechange = (e) => {
+      if (!champ_list) {
+        champ_list = JSON.parse(Http.responseText);
+        const a = [];
+        for (let key in champ_list.data) {
+          let b = {
+            name: champ_list.data[key].name,
+            image: champ_list.data[key].image.full,
+          };
+          a.push(b);
+        }
+        const select = document.getElementById("select");
+        select.addEventListener("click", () => {
+          team1.textContent = "";
+          team2.textContent = "";
+
+          let team = random(a);
+          team.team1.map((item) => {
+            let img = document.createElement("img");
+            img.src = img_url + a[item].image;
+            team1.appendChild(img);
+          });
+          team.team2.map((item) => {
+            let img = document.createElement("img");
+            img.src = img_url + a[item].image;
+            team2.appendChild(img);
+          });
+        });
+      }
+    };
+
+    function random(array) {
+      let dice = Number(document.getElementById("dice").value);
+      let duplication = document.getElementById("duplication").value;
+
+      const count = array.length;
+      const result = {
+        team1: [],
+        team2: [],
+      };
+
+      if (duplication === "O") {
+        while (result.team1.length < 5 + dice) {
+          var r = random_number(count);
+
+          if (!result.team1.includes(r)) {
+            result.team1.push(r);
+          }
+        }
+        while (result.team2.length < 5 + dice) {
+          var r = random_number(count);
+
+          if (!result.team2.includes(r)) {
+            result.team2.push(r);
+          }
+        }
+      } else if (duplication === "X") {
+        let new_array = [];
+        while (new_array.length < 10 + 2 * dice) {
+          var r = random_number(count);
+
+          if (!new_array.includes(r)) {
+            new_array.push(r);
+          }
+        }
+
+        result.team1 = new_array.splice(0, 5 + dice);
+        result.team2 = new_array;
+      }
+
+      return result;
+    }
+
+    function random_number(n) {
+      // 0 ~ n -1까지 리턴
+      return Math.floor(Math.random() * n);
+    }
+  </script>
 </html>
