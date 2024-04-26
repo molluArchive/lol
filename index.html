@@ -79,17 +79,25 @@
           team1.textContent = "";
           team2.textContent = "";
 
+          var team1_text = "";
+          var team2_text = "";
+
           let team = random(a);
           team.team1.map((item) => {
             let img = document.createElement("img");
             img.src = img_url + a[item].image;
             team1.appendChild(img);
+            team1_text += a[item].name + " | ";
           });
           team.team2.map((item) => {
             let img = document.createElement("img");
             img.src = img_url + a[item].image;
             team2.appendChild(img);
+            team2_text += a[item].name + " | ";
           });
+
+          console.log(team1_text);
+          console.log(team2_text);
         });
       }
     };
